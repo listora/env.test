@@ -29,7 +29,7 @@ macro with the Environ configuration of the given profile.
 
 ``` clj
 (require '[environ.core :refer [env]]
-         '[environ-test :refer [with-env]]
+         '[environ-test.core :refer [with-env]]
 
 (with-env :test
   (is (= "amqp://localhost:5672/test" (:rabbitmq-uri env))))
@@ -42,7 +42,7 @@ the whole namespace.
 
 ``` clj
 (require '[environ.core :refer [env]]
-         '[environ-test :refer [wrap-env]]
+         '[environ-test.core :refer [wrap-env]]
 
 (use-fixtures :each wrap-env :test )
 ```
