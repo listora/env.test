@@ -35,13 +35,14 @@ macro with the Environ configuration of the given profile.
   (is (= "amqp://localhost:5672/test" (:rabbitmq-uri env))))
 ```
 
-Or use the `wrap-env` function together with the
+Or use the `wrap-env` function together with
 [use-fixtures](http://richhickey.github.io/clojure/clojure.test-api.html#clojure.test/use-fixtures)
-function to make the configuration for the given profile available to
-the whole namespace.
+to make the configuration for the given profile available to the whole
+namespace.
 
 ``` clj
-(require '[environ.core :refer [env]]
+(require '[clojure.test :refer [use-fixtures]]
+         '[environ.core :refer [env]]
          '[environ-test.core :refer [wrap-env]]
 
 (use-fixtures :each wrap-env :test )
