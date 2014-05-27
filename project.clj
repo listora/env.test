@@ -1,4 +1,4 @@
-(defproject listora/env.test "0.1.0"
+(defproject listora/env.test "0.1.1-SNAPSHOT"
   :description "REPL functions for testing environ based projects."
   :url "https://github.com/listora/env.test"
   :license {:name "Eclipse Public License"
