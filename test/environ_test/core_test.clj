@@ -3,7 +3,7 @@
             [environ.core :refer [env]]
             [environ-test.core :refer :all]))
 
-(use-fixtures :each wrap-env :test )
+(use-env :test)
 
 (deftest test-read-env
   (is (= "amqp://localhost:5672/test" (:rabbitmq-uri env)))

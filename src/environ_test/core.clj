@@ -1,6 +1,7 @@
 (ns environ-test.core
   "REPL functions for testing environ based projects."
   (:require [clojure.java.io :as io]
+            [clojure.test :refer [use-fixtures]]
             [environ.core :refer [env]]
             [leiningen.core.project :as project]))
 
@@ -28,3 +29,10 @@
   [f & [profile]]
   (with-env (or profile :test)
     (f)))
+
+(defn use-env
+  "Wrap test runs in a fixture function that rebinds
+  `environ.core/env` to the map found under the :env key in the
+  Leiningen `profile`."
+  [& [profile]]
+  (use-fixtures :each wrap-env (or profile :test)))
