@@ -1,4 +1,4 @@
-(ns environ-test.core
+(ns env.test
   "REPL functions for testing environ based projects."
   (:require [clojure.java.io :as io]
             [clojure.test :refer [use-fixtures]]

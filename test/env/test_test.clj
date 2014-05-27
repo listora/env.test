@@ -1,7 +1,7 @@
-(ns environ-test.core-test
+(ns env.test-test
   (:require [clojure.test :refer :all]
             [environ.core :refer [env]]
-            [environ-test.core :refer :all]))
+            [env.test :refer :all]))
 
 (use-env :test)
 

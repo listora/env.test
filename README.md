@@ -1,6 +1,6 @@
-# environ-test
+# env.test
 
-[![Build Status](https://travis-ci.org/listora/environ-test.svg?branch=master)](https://travis-ci.org/listora/environ-test)
+[![Build Status](https://travis-ci.org/listora/env.test.svg?branch=master)](https://travis-ci.org/listora/env.test)
 
 [Environ](https://github.com/weavejester/environ) is a great library
 when developing applications that follow the
@@ -19,7 +19,7 @@ even when running tests. This library tries to solve this.
 To install via Leiningen add the following dependency to your `project.clj`:
 
 ``` clj
-[listora/environ-test "0.1.0"]
+[listora/env.test "0.1.0"]
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ macro with the Environ configuration of the given profile.
 
 ``` clj
 (require '[environ.core :refer [env]]
-         '[environ-test.core :refer [with-env]]
+         '[env.test :refer [with-env]]
 
 (with-env :test
   (is (= "amqp://localhost:5672/test" (:rabbitmq-uri env))))
@@ -43,7 +43,7 @@ namespace.
 ``` clj
 (require '[clojure.test :refer [use-fixtures]]
          '[environ.core :refer [env]]
-         '[environ-test.core :refer [wrap-env]]
+         '[env.test :refer [wrap-env]]
 
 (use-fixtures :each wrap-env :test )
 ```
