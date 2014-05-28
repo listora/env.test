@@ -35,4 +35,4 @@
   `environ.core/env` to the map found under the :env key in the
   Leiningen `profile`."
   [& [profile]]
-  (use-fixtures :each wrap-env (or profile :test)))
+  (use-fixtures :each #(wrap-env %1 (or profile :test))))

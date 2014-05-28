@@ -46,7 +46,7 @@ function, which does the same.
          '[environ.core :refer [env]]
          '[env.test :refer [wrap-env]]
 
-(use-fixtures :each wrap-env :test )
+(use-fixtures :each #(wrap-env %1 :test))
 ```
 
 ## License
