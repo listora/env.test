@@ -19,7 +19,7 @@ even when running tests. This library tries to solve this.
 To install via Leiningen add the following dependency to your `project.clj`:
 
 ``` clj
-[listora/env.test "0.1.0"]
+[listora/env.test "0.1.1"]
 ```
 
 ## Usage
