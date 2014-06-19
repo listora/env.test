@@ -6,6 +6,7 @@
   :dependencies [[environ "0.5.0"]
                  [leiningen-core "2.4.0"]
                  [org.clojure/clojure "1.6.0"]]
+  :deploy-repositories [["releases" :clojars]]
   :profiles {:dev {:env {:rabbitmq-uri "amqp://localhost:5672/dev"}
                    :plugins [[jonase/eastwood "0.1.2"]
                              [lein-environ "0.5.0"]
